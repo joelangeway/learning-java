@@ -1,6 +1,6 @@
 #What Does All That Crap Mean?
 
-For a while I've been helping some folks with Salesforce admin experience learn to code in Java. One of the frustrating things about Java as a first langauge, is that you can not know the meaning of most of the words and symbols in your first program. This article seeks to remove the magic, the mystery, the faith, from your first Java programs. 
+One of the frustrating things about Java as a first langauge, is that you can not know the meaning of most of the words and symbols in your first program. This article seeks to remove the magic, the mystery, the faith, from your first Java programs. 
 
 We'll use this as our example, first program:
 
