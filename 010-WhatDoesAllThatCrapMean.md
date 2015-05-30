@@ -5,13 +5,9 @@ For a while I've been helping some folks with Salesforce admin experience learn 
 We'll use this as our example, first program:
 
     public class Program { 
-
       public static void main(String[] args) {
-
         System.out.println("Hello, World.");
-
       }
-
     }
 
 ## What does `public` mean?
