@@ -1,6 +1,6 @@
 #What Does All That Crap Mean?
 
-For a while I've been helping some folks with Salesforce admin experience learn to code in Java. One of the frustrating things about Java as a first langauges, is that you can not know the meaning of most of the words and symbols in your first program. This article seeks to remove the magic, the mystery, the faith, from your first Java programs. 
+For a while I've been helping some folks with Salesforce admin experience learn to code in Java. One of the frustrating things about Java as a first langauge, is that you can not know the meaning of most of the words and symbols in your first program. This article seeks to remove the magic, the mystery, the faith, from your first Java programs. 
 
 We'll use this as our example, first program:
 
@@ -54,6 +54,20 @@ might correspond to object of this Java class:
       public String user_name;
     }
 
+##Why does a class have a name?
+
+Java programs typically consist of many classes. We refer to those classes by name. Our sample program *is* a class called "Program". Because executable Java code always lives in methods, and methods always live in classes, in order run any code, we need a class. We give the class a name, and when we run the java command at the command line to execute our program, we tell it what class we want to execute the main() method of by name.
+
+In order to be able to find classes, Java requires that class names match the name of the files they live in. This limits us to one class per file.
+
+##What do `{` and `}` mean?
+
+A Java class in made up of "members". Members are methods, variables (sometimes called fields or properties or attributes), and other class declarations. Our class, Program, has one member, a method called "main". The members of a class are surrounded by `{` and `}` in a "block" after the name. We often call a group of things surrounded by curly braces, `{` and `}`, a block. 
+
+##What is a method?
+
+In our sample program, `main` is a method. A method can be like a function in math. It is a sequence of instructions. The actual "code" that runs in a program, is always within a method. All our sample program does is print the string, "Hello, World.", so it only has that one line, one instruction, inside of its one method.
+
 ##What does `static` mean?
 
 When something is declared `static`, that means that the thing declared is for the whole class and is the same for every object of that class and it exists and is valid before any objects of the class are even created. That means that the Java runtime doesn't have to even create an object of the class `Program` in order to run our program. The runtime can call the `main` method on the class and no objects ever need enter into it, as far as the programmer cares.
@@ -62,10 +76,7 @@ There is no word which is the opposite of `static` in Java. You acheive the oppo
 
 We use static when we have to face up to the fact that something in our program doesn't always correspond to a particular object instance. There can only be one entry point of the program, one main method. You will almost never want to use the word static, except to define methods which are pure functions like `Math.sin`. 
 
-##Why does a class have a name?
+##What does void mean?
 
-Java programs typically consist of many classes. We refer to those classes by name. Because executable Java code always lives in methods, and methods always live in classes, in order run any code, we need a class. We give the class a name, and when we run the java command at the command line to execute our program, we tell it what class we want to execute the main() method of by name.
-
-In order to be able to find classes, Java requires that class names match the name of the files they live in. This limits us to one class per file.
-
+When we declare a method, the "return type" is stated before the name of the method. The return type, is the type of the value returned by a method. A method often acts like a function and returns a value after it is run, which is substituted in its place in an expression, like `Math.sin` in the expression `1 + Math.sin(0.1)`. The return type of `Math.sin` is `double`. The return type of the main method is `void`, meaning "not applicable." Void is not a type. It is an token meaning that there will be no value returned from this method.
 
