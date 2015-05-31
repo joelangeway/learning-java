@@ -57,7 +57,7 @@ A Java class is made up of "members". Every class declaration includes a block o
 
 A Java method is made up of statements (see next paragraph). Every method declaration includes a block of statements that we call the method body. When we call a method, we execute those statements in the method body. We'll talk more about methods under "What is a method?".
 
-The preceding paragraph is not totally correct. A Java method might not actually provide an implementation, but instead, simply state that classes which inherit from this class must implement this method. Java has a notion of "abstract" classes and "interfaces", which allow us to define common protocals for multiple classes to all behave as though they are the same kind of thing. We will talk more about this later.
+The preceding paragraph is not totally correct. A Java method might not actually provide an implementation, but instead, simply state that classes which inherit from this class must implement this method. Java has a notion of "abstract" classes and "interfaces", which allow us to define common protocols for multiple classes to all behave as though they are the same kind of thing. We will talk more about this later.
 
 ## What does `public` mean?
 
