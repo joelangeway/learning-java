@@ -162,5 +162,7 @@ and try running these commands after compiling:
 
 An array in general, is a fixed number of slots that we can store objects in. Creating an array of length N is like declaring N variables at once, of the same type. We don't have to know N when we write the program, our programs can determine how big arrays need to be just before creating them.
 
-We use arrays when we have to represent a lot of values and don't want to give them all indivual names, or when we need to represent a variable number of values. Command line arguments are like that. The user calling our class with the java command at the command like can give us any number of arguments. It our example HelloWorld program, the number of arguments will typically be zero.
+We use arrays when we have to represent a lot of values and don't want to give them all indivual names, or when we need to represent a variable number of values. Command line arguments are like that. The user calling our class with the java command at the command like can give us any number of arguments. It our example HelloWorld program, the number of arguments will typically be zero. 
+
+Details about arrays will be in another article.
 
