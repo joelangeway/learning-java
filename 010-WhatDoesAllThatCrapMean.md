@@ -125,7 +125,7 @@ A string, in general, means a sequence of characters, of any length including ze
 
 In Java, String is a class for representing strings as objects. The String class has some methods for getting the length, changing to all upper or lower case, trimming leading and trailing whitespace, and lots of other stuff, [javadoc](http://docs.oracle.com/javase/8/docs/api/index.html?java/lang/String.html). You'll frequently find that you don't actually need to call any methods of String objects though.
 
-##What do the ""'s mean?
+##What do the `""`'s mean?
 
 We use double-quotes to denote a literal String object. At the place where the string literal expression appears in your program, Java will substitute an object of the String class which represents those characters.
 
