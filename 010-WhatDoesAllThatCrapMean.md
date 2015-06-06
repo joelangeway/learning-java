@@ -1,6 +1,6 @@
 #What Does All That Crap Mean?
 
-One of the frustrating things about Java as a first langauge, is that you can not know the meaning of most of the words and symbols in your first program. This article seeks to remove the magic, the mystery, the faith, from your first Java programs. 
+One of the frustrating things about Java as a first language, is that you can not know the meaning of most of the words and symbols in your first program. This article seeks to remove the magic, the mystery, the faith, from your first Java programs. 
 
 We'll use this as our example, first program:
 
@@ -61,7 +61,7 @@ The preceding paragraph is not totally correct. A Java method might not actually
 
 ## What does `public` mean?
 
-The very first word of our program is `public`. When we declare a class or a field or a method, we must specify the "accessability" of the thing. Other options for accessability are `protected`, `private`, and `internal`. When we're talking about a field or a method or even another class, declared inside of a class, we call those inner things "memebers" of the class.
+The very first word of our program is `public`. When we declare a class or a field or a method, we must specify the "accessability" of the thing. Other options for accessability are `protected`, `private`, and `internal`. When we're talking about a field or a method or even another class, declared inside of a class, we call those inner things "members" of the class.
 
 When we say that a class is public, that means that the class can be referenced by any Java code in any other class or package. In order for your program to be run, the Java "runtime", needs to find your class and call its `main` method. If your class is not `public` then the Java runtime won't be able to access it. For the same reason, the `main` method also needs to be public. The word runtime is also used in the phrase "at runtime" to mean "while your program is running."
 
@@ -71,7 +71,7 @@ Most often, when we write Java code, our code will be integrated with a whole sy
 
 ### Possible Accessibility Levels
 
-`public` means anybody can get to it. `protected` means only code in this class and in classes inheriting from this class can get to it. `private` means nobody outside this class can get to it. `internal` is the default if you omit anything and means that code inside the same package can access it, but code outside the package can't, even if we inhereit from the class. 
+`public` means anybody can get to it. `protected` means only code in this class and in classes inheriting from this class can get to it. `private` means nobody outside this class can get to it. `internal` is the default if you omit anything and means that code inside the same package can access it, but code outside the package can't, even if we inherit from the class. 
 
 We use `public` to expose those bits of our code that the system we're integrating with will need to interact with. It is generally assumed that when a method is `public`, it is going to get called at some point. It is very common that a class will have many non-public methods that do the actual detailed work, but only a few public methods that expose a sort of black box of functionality for other code to make use of. If methods are `public` that don't need to be, it will confuse programmers trying to make use of your class.
 
@@ -79,11 +79,11 @@ We use `protected` to hide the details of how our class works from client code t
 
 There is almost never a good reason to use `private`. Some books use it casually as an easier to explain example. When something is `private`, that generally means it is only visible inside the one class it is declared in. It can never be extended or fixed without changing the source code of that very class. 
 
-There is almost never a good reason to use `internal`. Some books use it casually as an example because it is the default that you get when you omit any accessability from the declaration. When something is `internal`, that generally means it is only visible inside the original source package that it is declared in. It can be extended or fixed by contorting the client code to use the same package names as the source, but that is often terribly confusing.
+There is almost never a good reason to use `internal`. Some books use it casually as an example because it is the default that you get when you omit any accessibility from the declaration. When something is `internal`, that generally means it is only visible inside the original source package that it is declared in. It can be extended or fixed by contorting the client code to use the same package names as the source, but that is often terribly confusing.
 
 ### Inheritance
 
-When you're just starting out, it may be confusing to think about fixing the behavior of a class without changing the class source file at all. This is the great strength of Object Oriented Programming. Often times, a class will be used in many, many places, and changing the class will be a horrendous risk because there are too many places that a tiny change might cause an error, or the class will come from some library and changing the source code of the class would be either impossible or inpractical. But, if we can make a new class, that is just like the original class, but for one little difference, and which we can use anywhere we'd use the original class, that would be much better. Inheritance lets us do that. It is related to that "abstact" and "interface" stuff breifly mentioned above. We'll talk about inheritance in detail later. For now, just know that `protected` is generally a better choice than `private` or `internal`.
+When you're just starting out, it may be confusing to think about fixing the behavior of a class without changing the class source file at all. This is the great strength of Object Oriented Programming. Often times, a class will be used in many, many places, and changing the class will be a horrendous risk because there are too many places that a tiny change might cause an error, or the class will come from some library and changing the source code of the class would be either impossible or impractical. But, if we can make a new class, that is just like the original class, but for one little difference, and which we can use anywhere we'd use the original class, that would be much better. Inheritance lets us do that. It is related to that "abstract" and "interface" stuff briefly mentioned above. We'll talk about inheritance in detail later. For now, just know that `protected` is generally a better choice than `private` or `internal`.
 
 ##Why does a class have a name?
 
@@ -99,11 +99,34 @@ In our sample program, `main` is a method. A method can be like a function in ma
 
 When something is declared `static`, that means that the thing declared is for the whole class and is the same for every object of that class and it exists and is valid before any objects of the class are even created. That means that the Java runtime doesn't have to even create an object of the class `Program` in order to run our program. The runtime can call the `main` method on the class and no objects ever need enter into it, as far as the programmer cares.
 
-There is no word which is the opposite of `static` in Java. You acheive the opposite effect of `static` by merely ommiting the word `static`. We said above that every distinct bit a data or state or variable belongs to an object. Well, every class is also a sort of psuedo-object of its own special class. So when the runtime calls the main method in our sample program, it's calling a method on an object, but the object *is* the class. 
+There is no word which is the opposite of `static` in Java. You achieve the opposite effect of `static` by merely omitting the word `static`. We said above that every distinct bit a data or state or variable belongs to an object. Well, every class is also a sort of psuedo-object of its own special class. So when the runtime calls the main method in our sample program, it's calling a method on an object, but the object *is* the class. 
 
 We use static when we have to face up to the fact that something in our program doesn't always correspond to a particular object instance. There can only be one entry point of the program, one main method. You will almost never want to use the word static, except to define methods which are pure functions like `Math.sin`. 
 
 ##What does void mean?
 
 When we declare a method, the "return type" is stated before the name of the method. The return type, is the type of the value returned by a method. A method often acts like a function and returns a value after it is run, which is substituted in its place in an expression, like `Math.sin` in the expression `1 + Math.sin(0.1)`. The return type of `Math.sin` is `double`. The return type of the main method is `void`, meaning "not applicable." Void is not a type. It is an token meaning that there will be no value returned from this method.
+
+##What does System mean?
+
+"System" is the name of a class, [javadoc](http://docs.oracle.com/javase/8/docs/api/index.html?java/lang/System.html). Some classes are automatically availible in every Java program, like "Math". All the most basic, primitive stuff, like how to just print a result to the screen, is done with the System class.
+
+##What does "out" main?
+
+"out" is a static field of the System class. It is variable that refers to an object of the class [PrintStream ](http://docs.oracle.com/javase/8/docs/api/index.html?java/io/PrintStream.html). A PrintStream object is a destination that we can write text to. It might be the console; it might be a file; it might be an SMS message. It has methods to write Strings and all sorts of numbers and provides basic control of formatting.
+
+##What does "println" mean?
+
+"println" is a method of the PrintStream class. It takes a String as an argument, and writes the characters of that String to the text destination, followed by a new-line character. It's like it types out the string and then hits "enter".
+
+###What's a String?
+
+A string, in general, means a sequence of characters, of any length including zero. A character, in general, means a letter, numeral, symbol, punctuation mark, particular kind of white space, or some other grapheme.
+
+In Java, String is a class for representing strings as objects. The String class has some methods for getting the length, changing to all upper or lower case, trimming leading and trailing whitespace, and lots of other stuff, [javadoc](http://docs.oracle.com/javase/8/docs/api/index.html?java/lang/String.html). You'll frequently find that you don't actually need to call any methods of String objects though.
+
+##What do the ""'s mean?
+
+We use double-quotes to denote a literal String object. At the place where the string literal expression appears in your program, Java will substitute an object of the String class which represents those characters.
+
 
