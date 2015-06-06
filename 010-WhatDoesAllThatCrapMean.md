@@ -166,3 +166,8 @@ We use arrays when we have to represent a lot of values and don't want to give t
 
 Details about arrays will be in another article.
 
+##What's the `;` for?
+
+Java methods are made up of statements and control structures. A statement, is either a declaration of a local variable, or a method call. Statements, end in `;`. It's like the period in English.
+
+A control structure is one of those things with keywords like `if`, `else`, `while`, `for`... which cause the code in a method to execute in some sequence other than strait from top to bottom. Details about control structures will be in another article. 
