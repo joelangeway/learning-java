@@ -129,4 +129,31 @@ In Java, String is a class for representing strings as objects. The String class
 
 We use double-quotes to denote a literal String object. At the place where the string literal expression appears in your program, Java will substitute an object of the String class which represents those characters.
 
+##What is `(String[] args)`?
+
+When we declare a method, we must give a list of the arguments or parameters that the method accepts. We give that list as comma separated pairs of type and name. The type `String[]` is pronounced "an array of String" or "array of Strings". 
+
+The main method, always takes one argument, which is an array of Strings. You can give that argument whatever name you like. That array, will contain one String for every argument given to you program from the command line. 
+
+Try this program:
+
+    public class Arrrgs {
+      public static void main(String[] args) {
+        System.out.println("Arrrgument 1 was: " + args[0]);
+        System.out.println("Arrrgument 2 was: " + args[1]);
+      }
+    }
+
+and try running these commands after compiling:
+
+    java Arrrgs arg1 args2
+    java Arrrgs "arg1 stillarg1" arg2
+    java Arrrgs oneArg # <-this breaks
+
+##What is an "array"?
+
+An array in general, is a fixed number of slots that we can store objects in. Creating an array of length N is like declaring N variables at once, of the same type. We don't have to know N when we write the program, our programs can determine how big arrays need to be just before creating them.
+
+We use arrays when we have to represent a lot of values and don't want to give them all indivual names, or when we need to represent a variable number of values. Command line arguments are like that. The user calling our class with the java command at the command like can give us any number of arguments. It our example HelloWorld program, the number of arguments will typically be zero.
+
 
