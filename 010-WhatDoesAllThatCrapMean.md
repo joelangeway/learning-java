@@ -107,7 +107,7 @@ We use static when we have to face up to the fact that something in our program 
 
 When we declare a method, the "return type" is stated before the name of the method. The return type, is the type of the value returned by a method. A method often acts like a function and returns a value after it is run, which is substituted in its place in an expression, like `Math.sin` in the expression `1 + Math.sin(0.1)`. The return type of `Math.sin` is `double`. The return type of the main method is `void`, meaning "not applicable." Void is not a type. It is an token meaning that there will be no value returned from this method.
 
-#What's with the dots, the `.`'s in `System.out.println` ?
+##What's with the dots, the `.`'s in `System.out.println` ?
 
 The dot is used to refer to members. `System.out` refers to the static field named "out" of the "System" class. `System.out.println` refers to the method named "println" of the PrintStream class, calling that method on the object refered to by `System.out`.
 
