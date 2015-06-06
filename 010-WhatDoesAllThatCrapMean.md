@@ -107,6 +107,10 @@ We use static when we have to face up to the fact that something in our program 
 
 When we declare a method, the "return type" is stated before the name of the method. The return type, is the type of the value returned by a method. A method often acts like a function and returns a value after it is run, which is substituted in its place in an expression, like `Math.sin` in the expression `1 + Math.sin(0.1)`. The return type of `Math.sin` is `double`. The return type of the main method is `void`, meaning "not applicable." Void is not a type. It is an token meaning that there will be no value returned from this method.
 
+#What's with the dots, the `.`'s in `System.out.println` ?
+
+The dot is used to refer to members. `System.out` refers to the static field named "out" of the "System" class. `System.out.println` refers to the method named "println" of the PrintStream class, calling that method on the object refered to by `System.out`.
+
 ##What does System mean?
 
 "System" is the name of a class, [javadoc](http://docs.oracle.com/javase/8/docs/api/index.html?java/lang/System.html). Some classes are automatically availible in every Java program, like "Math". All the most basic, primitive stuff, like how to just print a result to the screen, is done with the System class.
@@ -128,6 +132,10 @@ In Java, String is a class for representing strings as objects. The String class
 ##What do the `""`'s mean?
 
 We use double-quotes to denote a literal String object. At the place where the string literal expression appears in your program, Java will substitute an object of the String class which represents those characters.
+
+##What does the `(` and `)` mean?
+
+Parenthesis in Java are used to make precedence clear in expression just like in math: `(2 + 3) * 4` is the same as `2 + 3 * 4`, and to surround argument lists in method declarations and method calls. When we say `System.out.println("Hello, World.")`, we're "calling" the method "println" on the object refered to by `System.out` and passing it one argument, the object of the String class which we create with the String literal, "Hello, World.". If a method accepts multiple arguments, they are separated with commas.
 
 ##What is `(String[] args)`?
 
@@ -155,5 +163,4 @@ and try running these commands after compiling:
 An array in general, is a fixed number of slots that we can store objects in. Creating an array of length N is like declaring N variables at once, of the same type. We don't have to know N when we write the program, our programs can determine how big arrays need to be just before creating them.
 
 We use arrays when we have to represent a lot of values and don't want to give them all indivual names, or when we need to represent a variable number of values. Command line arguments are like that. The user calling our class with the java command at the command like can give us any number of arguments. It our example HelloWorld program, the number of arguments will typically be zero.
-
 
