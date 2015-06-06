@@ -12,7 +12,7 @@ We'll use this as our example, first program:
 
 ##What does `class` mean?
 
-A Java class is a category of Java objects. A Java object is always an instance of a Java class. In the SalesForce world, the term "Object" means something much more like "class" in the Java world. An "object" in Java is much more like a "record" in SalesForce. In Java, the class is the basic unit of delineation, and every distinct bit a data or state or variable belongs to an object which is an instance of a particular class.
+A Java class is a category of Java objects. A Java object is always an instance of a Java class. The world instance here means a particular, uniquely identifiable thing of a category; in the Salesforce world, "instance" mean instance of a Salesforce environment.  In the SalesForce world, the term "Object" means something much more like "class" in the Java world. An "object" in Java is much more like a "record" in SalesForce. In Java, the class is the basic unit of delineation. Every declaration is either a class, a memeber of a class, or is private to a single method. Every distinct bit a data or state or variable belongs to an object which is an instance of a particular class.
 
 ###Classes and objects are like forms and copies of forms
 
