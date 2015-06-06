@@ -28,7 +28,7 @@ The final version will look something like this:
       }
 
       public static void main(String[] args) {
-        for(int nBeers = 99; nBeers >= 1; nBeers-- ) {
+        for(int nBeers = 99; nBeers >= 1; nBeers = nBeers - 1 ) {
           String line = lineOfSong(nBeers);
           System.out.println(line);
         }
