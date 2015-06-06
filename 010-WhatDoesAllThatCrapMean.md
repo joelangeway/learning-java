@@ -57,11 +57,11 @@ A Java class is made up of "members". Every class declaration includes a block o
 
 A Java method is made up of statements (see next paragraph). Every method declaration includes a block of statements that we call the method body. When we call a method, we execute those statements in the method body. We'll talk more about methods under "What is a method?".
 
-The preceding paragraph is not totally correct. A Java method might not actually provide an implementation, but instead, simply state that classes which inherit from this class must implement this method. Java has a notion of "abstract" classes and "interfaces", which allow us to define common protocals for multiple classes to all behave as though they are the same kind of thing. We will talk more about this later.
+The preceding paragraph is not totally correct. A Java method might not actually provide an implementation, but instead, simply state that classes which inherit from this class must implement this method. Java has a notion of "abstract" classes and "interfaces", which allow us to define common protocols for multiple classes to all behave as though they are the same kind of thing. We will talk more about this later.
 
 ## What does `public` mean?
 
-The very first word of our program is `public`. When we declare a class or a field or a method, we must specify the "accessability" of the thing. Other options for accessability are `protected`, `private`, and `internal`. When we're talking about a field or a method or even another class, declared inside of a class, we call those inner things "members" of the class.
+The very first word of our program is `public`. When we declare a class or a field or a method, we must specify the "accessability" of the thing. Other options for accessability are `protected`, `private`, and `internal`. 
 
 When we say that a class is public, that means that the class can be referenced by any Java code in any other class or package. In order for your program to be run, the Java "runtime", needs to find your class and call its `main` method. If your class is not `public` then the Java runtime won't be able to access it. For the same reason, the `main` method also needs to be public. The word runtime is also used in the phrase "at runtime" to mean "while your program is running."
 
