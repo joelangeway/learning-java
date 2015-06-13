@@ -135,7 +135,7 @@ We use double-quotes to denote a literal String object. At the place where the s
 
 ##What does the `(` and `)` mean?
 
-Parenthesis in Java are used to make precedence clear in expression just like in math: `(2 + 3) * 4` is the same as `2 + 3 * 4`, and to surround argument lists in method declarations and method calls. When we say `System.out.println("Hello, World.")`, we're "calling" the method "println" on the object refered to by `System.out` and passing it one argument, the object of the String class which we create with the String literal, "Hello, World.". If a method accepts multiple arguments, they are separated with commas.
+Parenthesis in Java are used to make precedence clear in expression just like in math: `(2 + 3) * 4` is NOT the same as `2 + 3 * 4`, and to surround argument lists in method declarations and method calls. When we say `System.out.println("Hello, World.")`, we're "calling" the method "println" on the object refered to by `System.out` and passing it one argument, the object of the String class which we create with the String literal, "Hello, World.". If a method accepts multiple arguments, they are separated with commas.
 
 ##What is `(String[] args)`?
 
