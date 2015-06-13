@@ -31,7 +31,7 @@ Version 1:
 
 This program is full of state. That is an unprecise, sort of colloquial way to say, it has variables that change value thoughout. Every one of these variables, is an unknown thing we have to think about to know that a program is correct.
 
-A program is a sort of machine. If we think of variables that change value as moving parts, then everytime you use `++` or `--`, you're introducing another moving part to your program. Moving parts make machines fragile and dangerous. Use as few as possible.
+A program is a sort of machine. Variables that change are moving parts of that machine. Moving parts make machines fragile and dangerous. We should use as few as possible.
 
 State, is the space of possible positions of all the moving parts of the machine. When we talk about "a state", we mean a particular configuration of positions of those moving parts, or the particular value stored within each variable.
 
