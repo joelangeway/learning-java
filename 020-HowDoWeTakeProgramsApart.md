@@ -35,6 +35,16 @@ A program is a sort of machine. Variables that change are moving parts of that m
 
 State, is the space of possible positions of all the moving parts of the machine. When we talk about "a state", we mean a particular configuration of positions of those moving parts, or the particular value stored within each variable.
 
+##Tell Me What A Variable Is Already!
+
+OK, we're finally ready.
+
+A variable is a bit of state, a moving part in the machine of the program. 
+
+We use multiple variables to represent the state of the program, so that each variable can be a precisely defineable part of the whole state. Such a definition might be, "`beerNum` records the number of beers that are currently on the wall."
+
+The word "currently" is important in that definition. It implies that the number of beers on the wall is not constant, but changes over time.
+
 ###OK, how do we get rid of state?
 
 functions! more coming soon...
