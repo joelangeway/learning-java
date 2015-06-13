@@ -3,10 +3,7 @@
 It used to be that computers were slow, and compilers were not smart. Computers used to be so slow and compilers were so dumb that it made a difference whether you wrote in your program to add two numbers, or if you told it to just increment a number from some starting offset. If this were still true, and we needed to write a Java method that would copy int's from one array to another, it might look like this:
 
     public class ArrayUtils {
-      public static void copyInts(
-          int[] srcArray, int srcStart, 
-          int[] destArray, int destStart, 
-          int count) {
+      public static void copyInts(int[] srcArray, int srcStart, int[] destArray, int destStart, int count) {
         int i = srcStart;
         int j = destStart;
         for( int k = 0 ; k < count ; k++) {
@@ -20,10 +17,7 @@ This might be quicker because there are no add operations at all. When we say th
 This is no longer a good idea. Computers are fast. Compilers are smart. I would almost be willing to bet that the modern Java compiler would generate exactly the same machine instructions for this version:
 
     public class ArrayUtils {
-      public static void copyInts(
-          int[] srcArray, int srcStart, 
-          int[] destArray, int destStart, 
-          int count) {
+      public static void copyInts(int[] srcArray, int srcStart, int[] destArray, int destStart, int count) {
         for( int k = 0 ; k < count ; k++) {
           destArray[ srcStart + k ] = srcArray [ destStart + k ];
         }
