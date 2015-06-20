@@ -12,7 +12,7 @@ We'll use this as our example, first program:
 
 ##What does `class` mean?
 
-A Java class is a category of Java objects. A Java object is always an instance of a Java class. The world instance here means a particular, uniquely identifiable thing of a category; in the Salesforce world, "instance" mean instance of a Salesforce environment.  In the SalesForce world, the term "Object" means something much more like "class" in the Java world. An "object" in Java is much more like a "record" in SalesForce. In Java, the class is the basic unit of delineation. Every declaration is either a class, a memeber of a class, or is private to a single method. Every distinct bit a data or state or variable belongs to an object which is an instance of a particular class.
+A Java class is a category of Java objects. A Java object is always an instance of a Java class. The word instance here means a particular, uniquely identifiable thing of a category; in the Salesforce world, "instance" means instance of a Salesforce environment. Further in the SalesForce world, the term "Object" means something much more like "class" in the Java world. An "object" in Java is much more like a "record" in SalesForce. In Java, the class is the basic unit of delineation. Every declaration is either a class, a memeber of a class, or is local to a single method. Every distinct bit a data or state or variable belongs to an object which is an instance of a particular class.
 
 ###Classes and objects are like forms and copies of forms
 
@@ -162,7 +162,7 @@ and try running these commands after compiling:
 
 An array in general, is a fixed number of slots that we can store objects in. Creating an array of length N is like declaring N variables at once, of the same type. We don't have to know N when we write the program, our programs can determine how big arrays need to be just before creating them.
 
-We use arrays when we have to represent a lot of values and don't want to give them all indivual names, or when we need to represent a variable number of values. Command line arguments are like that. The user calling our class with the java command at the command like can give us any number of arguments. It our example HelloWorld program, the number of arguments will typically be zero. 
+We use arrays when we have to represent a lot of values and don't want to give them all individual names, or when we need to represent a variable number of values. Command line arguments are like that. The user calling our class with the java command at the command like can give us any number of arguments. It our example HelloWorld program, the number of arguments will typically be zero. 
 
 Details about arrays will be in another article.
 
@@ -170,10 +170,8 @@ Details about arrays will be in another article.
 
 Java methods are made up of statements and control structures. A statement, is either a declaration of a local variable, or a method call. Statements, end in `;`. It's like the period in English.
 
-A control structure is one of those things with keywords like `if`, `else`, `while`, `for`... which cause the code in a method to execute in some sequence other than strait from top to bottom. Details about control structures will be in another article. 
+A control structure is one of those things with keywords like `if`, `else`, `while`, `for`... which cause the code in a method to execute in some sequence other than straight from top to bottom. Details about control structures will be in another article. 
 
 #Variables
 
-This article broke one of its promises and used the word "variable" all over the place without precisely defining it. That will be another article.
-
-
+This article broke one of its promises and used the word "variable" all over the place without precisely defining it. In the [next article](https://github.com/joelangeway/learning-java/blob/master/020-HowDoWeTakeProgramsApart.md) we make up for this.
