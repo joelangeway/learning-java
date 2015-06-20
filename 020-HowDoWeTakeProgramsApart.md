@@ -216,7 +216,7 @@ We did two things here. Thing one: We decomposed the two complicated String buil
 
 ###Format Strings
 
-`String.format` is a static method of the String class, which you get for free in all your programs. Its first argument is a "[format string](http://docs.oracle.com/javase/7/docs/api/java/util/Formatter.html#syntax)" which is a template or madlib that we'll fill in with the other arguments. A `%` in a format string marks a spot to be filled in by a subsequent argument. Typically, we'd just write `%s` to say, substitute here with the next argument that has not yet been used and render it as a String. We could use other letters to specify that we render a date in the default locale or a number in scientific notation with the correct number of significant digits.
+`String.format` is a static method of the String class, which you get for free in all your programs. Its first argument is a "[format string](http://docs.oracle.com/javase/7/docs/api/java/util/Formatter.html#syntax)" which is a template or madlib that we'll fill in with the other arguments. A `%` in a format string marks a spot to be filled in by a subsequent argument. Typically, we'd just write `%s` to say, substitute here with the next argument that has not yet been used and render it as a String. We could use other letters to specify that we render a date in the default locale or a number in scientific notation with the correct number of significant digits or lots of other things.
 
 When the `%` is followed by `1$`, that means that the argument just after the format string goes there, a `2$` would mean the one after that, and so on. If we wish to use the same argument twice, we must specify which arguments to substitute. 
 
